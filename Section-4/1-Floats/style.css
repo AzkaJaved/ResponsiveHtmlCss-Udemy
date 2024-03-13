@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+ }
+ body{
+     /* position: relative; */
+     border-top: 10px solid #1098ad ;
+ }
+ .container{
+     width: 800px;
+     margin:0 auto;
+ }
+ header{
+     position: relative;
+ }
+ .post-header{
+     margin-bottom: 40px;
+ }
+ .main-header{
+     background-color: #f7f7f7;
+     padding: 20px;
+     margin-bottom: 60px;
+     /* height: 80px; */
+ }   
+ h1,h2,h3,h4,p,li,header,article{
+     font-family: sans-serif;
+     color: #444;
+ }
+ h1,h2,h3{
+     color:#1098ad;
+ }
+ 
+ h1{
+     font-size: 26px;
+     text-transform: uppercase;
+     font-style: italic;
+ }
+ .post-img{
+     width: 100%;
+     height: auto;
+ }
+ article{
+     margin-bottom: 60px;
+ }
+ h2{
+     font-size: 42px;  
+     margin-bottom: 30px; 
+ }
+ h3{
+     font-size: 30px;
+     margin-bottom: 20px;
+     margin-top: 40px;
+ }
+ h4{
+     font-size: 20px;
+     text-transform: uppercase;
+     text-align: center;
+ }ul,ol{
+     margin-left: 50px;
+ }
+ p{
+     font-size: 22px;
+     line-height: 1.5;
+     margin-bottom: 15px;
+ }
+ li{ 
+     font-size: 18px;
+     margin-bottom: 10px;    
+ }
+ li:last-child{
+     margin-bottom: 0px;
+ }
+ nav a:link{
+     margin-right: 30px;
+     margin-top: 30px; 
+     display: inline-block;
+ }
+ h2{
+     position: relative;
+     /* background-color: #eca461; */
+ }
+ h2::after{
+     content: 'TOP';
+     background-color: #f7f708;
+     font-size: 16px;
+     color: #070707;
+     font-weight: bold;
+     display: inline-block;
+     padding: 10px;
+     position: absolute;
+     top: -15px;
+     right: 0;
+ 
+ }
+ /* footer p {
+     font-size: 12px;
+ } */
+ article header p{
+     font-style: italic;
+ }
+ #author{
+     font-style: italic;
+     font-size: 18px;
+ }
+ #copyright{
+     font-size: 16px;
+ }
+ .related-author{
+     font-size: 18px;
+     font-weight: bold;
+ }
+ .related{
+     list-style:none;
+ }
+ aside{
+     border-top: 5px solid #1098ad;
+     border-bottom: 5px solid #1098ad;
+     background-color: #f7f7f7;
+     padding: 50px 0;
+     width: 500px;
+ 
+ }
+ li:first-child{
+     font-weight: bold;
+ }
+ a:link{
+     text-decoration: none;
+     color: #1098ad;
+ }
+ a:visited{
+     color:#1098ad;
+ }
+ a:hover{
+     color: orangered;
+     font-weight: bold;
+     text-decoration: underline orangered;
+ }
+ a:active{
+     background-color: black;
+     font-style: italic ;
+ }
+ .like{
+     font-size: 22px;
+     font-family: sans-serif;
+     padding: 20px;
+     cursor: pointer;
+     position: absolute;
+     bottom: 180px;
+     right: 50px;
+ }
+ h1::first-letter{
+     font-style: normal;
+ }
+ nav{
+     font-size:18px ;
+     text-align: center;
+ }
+ nav a:link{
+     
+ }
