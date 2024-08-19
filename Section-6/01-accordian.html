@@ -24,41 +24,53 @@
       .accordion {
         width: 700px;
         margin: 100px auto;
-        grid-template-columns: 3;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+      .open {
+        border-top: 4px solid #087f5b;
+      }
+      .open .number,
+      .open .text {
+        color: #087f5b;
+      }
+      .open .hidden-box {
+        display: block;
       }
 
       .item {
-        border-top: 5px solid #087f5b;
-        display: grid;
+        /* border-top: 5px solid #087f5b; */
+        padding: 24px;
         box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.1);
-        grid-template-areas:
-          "number text-para down-arrow"
-          "description";
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        column-gap: 24px;
+        row-gap: 32px;
+        align-items: center;
+        /* grid-template-areas:
+          "number" "text-para down-arrow"
+          "description"; */
         background-color: white;
       }
       .number {
-        grid-area: number;
-      }
-      .text {
-        grid-area: text-para;
-      }
-      .icon {
-        grid-area: down-arrow;
-      }
-      .hidden-box {
-        grid-area: description;
+        color: #ced4da;
       }
       .number,
       .text {
         font-size: 24px;
         font-weight: 500;
-        color: #087f5b;
+        /* color: #087f5b; */
       }
       .icon {
         width: 24px;
         height: 24px;
         stroke: #087f5b;
         fill: #087f5b;
+      }
+      .hidden-box {
+        grid-column: 2;
+        display: none;
       }
 
       .hidden-box p {
@@ -78,8 +90,70 @@
   <body>
     <div class="accordion">
       <div class="item">
+        <p class="number">01</p>
+        <p class="text">Where are these chairs assembled?</p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon"
+          id="Bold"
+          viewBox="0 0 24 24"
+          width="512"
+          height="512"
+        >
+          <path
+            d="M19.061,7.854a1.5,1.5,0,0,0-2.122,0l-4.586,4.585a.5.5,0,0,1-.707,0L7.061,7.854A1.5,1.5,0,0,0,4.939,9.975l4.586,4.586a3.5,3.5,0,0,0,4.95,0l4.586-4.586A1.5,1.5,0,0,0,19.061,7.854Z"
+          />
+        </svg>
+        <div class="hidden-box">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+            magnam reprehenderit atque officia quaerat repellat fugiat facere
+            enim, natus autem quidem beatae possimus, facilis animi eius, ipsam
+            officiis! Eaque, voluptates.
+          </p>
+          <ul>
+            <li>Lorem ipsum dolor sit amet consectetur.</li>
+            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet Lorem ipsum dolor sit.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="item open">
         <p class="number">02</p>
         <p class="text">How long do I have to return my chair?</p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon"
+          id="Bold"
+          viewBox="0 0 24 24"
+          width="512"
+          height="512"
+        >
+          <path
+            d="M19.061,7.854a1.5,1.5,0,0,0-2.122,0l-4.586,4.585a.5.5,0,0,1-.707,0L7.061,7.854A1.5,1.5,0,0,0,4.939,9.975l4.586,4.586a3.5,3.5,0,0,0,4.95,0l4.586-4.586A1.5,1.5,0,0,0,19.061,7.854Z"
+          />
+        </svg>
+        <div class="hidden-box">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+            magnam reprehenderit atque officia quaerat repellat fugiat facere
+            enim, natus autem quidem beatae possimus, facilis animi eius, ipsam
+            officiis! Eaque, voluptates.
+          </p>
+          <ul>
+            <li>Lorem ipsum dolor sit amet consectetur.</li>
+            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet Lorem ipsum dolor sit.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="item">
+        <p class="number">03</p>
+        <p class="text">Do you ship to countries outside the EU?</p>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="icon"
