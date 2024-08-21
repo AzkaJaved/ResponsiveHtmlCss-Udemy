@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App Layout</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: sans-serif;
+        color: #343a40;
+        font-size: 24px;
+        text-align: center;
+        font-weight: bold;
+      }
+      nav,
+      section,
+      aside,
+      main {
+        padding-top: 24px;
+      }
+      .app-layout {
+        height: 100vh;
+        display: grid;
+        /* grid template columns specifies the width of columns */
+        /* grid template rows specifies the height of the rows   */
+        grid-template-columns: 80px 400px 1fr 250px;
+        grid-template-rows: 80px 1fr;
+        grid-template-areas:
+          "nav menu menu menu "
+          "nav section main aside";
+      }
+      nav {
+        background-color: #343a40;
+        color: #fff;
+        grid-area: nav;
+      }
+      menu {
+        padding: 0 40px;
+        background-color: rgb(109, 36, 245);
+        color: #fff;
+        grid-area: menu;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        /* position: relative; */
+      }
+      section {
+        background-color: #e9ecef;
+        grid-area: section;
+        padding: 40px;
+        /* How elements that dont fit into grid container appear  */
+        overflow: scroll;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+      aside {
+        background-color: #e9ecef;
+        grid-area: aside;
+      }
+      main {
+        grid-area: main;
+      }
+      menu button:nth-child(5) {
+        /* position: absolute; */
+        background-color: #d6336c;
+        margin-left: auto;
+        /* right: 12px; */
+      }
+      button {
+        font-size: 16px;
+        background-color: #5f3dc4;
+        border: none;
+        cursor: pointer;
+        color: #fff;
+        padding: 8px 12px;
+        display: inline-block;
+      }
+      .box {
+        background-color: #83868a;
+        height: 96px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* text-align: center; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app-layout">
+      <nav>Nav</nav>
+      <menu>
+        <button>New</button>
+        <button>Reply</button>
+        <button>Forward</button>
+        <button>Mark unread</button>
+        <button class="trash">Trash</button>
+      </menu>
+      <section>
+        <div class="box">Email 1</div>
+        <div class="box">Email 2</div>
+        <div class="box">Email 3</div>
+        <div class="box">Email 4</div>
+        <div class="box">Email 5</div>
+        <div class="box">Email 6</div>
+        <div class="box">Email 7</div>
+        <div class="box">Email 8</div>
+        <div class="box">Email 9</div>
+        <div class="box">Email 10</div>
+      </section>
+      <main>Email view</main>
+      <aside>Additional Info</aside>
+    </div>
+  </body>
+</html>
