@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Call to Action Component</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .container {
+        height: 100vh;
+        position: relative;
+      }
+      .upper {
+        height: 50vh;
+        background-color: #fff;
+      }
+      .lower {
+        background-color: #0f002e;
+        height: 50vh;
+      }
+      .action-component {
+        background-color: #7c65af;
+        position: absolute;
+        color: #fff;
+        width: 70%;
+        padding: 48px 64px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 12px;
+      }
+      h1 {
+        font-size: 36px;
+      }
+      p {
+        font-size: 24px;
+        line-height: 1.6;
+      }
+      .input-div {
+        width: 50%;
+        margin-top: 18px;
+        background-color: #fff;
+        padding: 2px 2px;
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      input {
+        border: none;
+        padding: 8px 8px;
+        width: 200px;
+      }
+      input:focus {
+        border: 0;
+        outline: none;
+        /* border: 2px solid red; */
+      }
+      ::placeholder {
+        /* color: red; */
+        font-family: "Inter", sans-serif;
+        font-size: 18px;
+        color: #7c65af;
+
+        opacity: 1; /* Firefox */
+      }
+      button {
+        background-color: #7c65af;
+        /* display: inline-block; */
+        color: #fff;
+        font-size: 18px;
+        font-weight: 600;
+        padding: 12px 24px;
+        border-radius: 8px;
+        border: 2px solid #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="upper"></div>
+      <div class="lower"></div>
+      <div class="action-component">
+        <h1>Would you like to see Narrative BI in action</h1>
+        <p>
+          Leave you email address to discuss how your company can get first
+          actionable insights today
+        </p>
+        <div class="input-div">
+          <input type="text" placeholder="Enter your work email address" />
+          <button>Get a demo</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
